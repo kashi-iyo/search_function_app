@@ -1,0 +1,12 @@
+= search_form_for(@q, url: search_path) do |f|
+  p
+    = f.label :title_or_description_or_content_cont, 'キーワード'
+    = f.search_field :title_or_description_or_content_cont, :include_blank => '指定なし'
+  =f.submit
+
+
+= search_form_for(@q, url: select_search_path) do |f|
+  p
+    = f.label :post_folder_id_eq, 'シリーズ'
+    = f.collection_select :post_folder_id_eq, @post_folders, :id, :folder_title, :include_blank => '指定なし'
+  =f.submit
