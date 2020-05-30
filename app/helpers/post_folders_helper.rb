@@ -1,0 +1,2 @@
+module PostFoldersHelper
+end

@@ -1,0 +1,5 @@
+= search_form_for(@q, url: search_path) do |f|
+  p
+    = f.label :posts_title_or_posts_description_or_posts_content_cont, 'キーワード'
+    = f.search_field :posts_title_or_posts_description_or_posts_content_cont, :include_blank => '指定なし'
+  =f.submit
